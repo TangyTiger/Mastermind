@@ -37,7 +37,7 @@ def get_code():
   guess_code = input("Guess the 4 digit code (abcd): ").upper()
   user_code = list(guess_code)
   if len(user_code) != length:
-    print("Must enter 4 letters")
+    print("Must enter", length, "letters")
     get_code()
   for i in range(len(guess_code)):
     if user_code[i] in letters: 
