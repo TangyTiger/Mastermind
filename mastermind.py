@@ -3,7 +3,7 @@ letters = ["A", "B", "C", "D", "E", "F"]
 length = 4
 
 def main():
-  list_code = create_code(4)
+  list_code = create_code(length)
   secret_code = "".join(list_code)
 
   guess_counter = 0
@@ -21,7 +21,7 @@ def main():
   else:
     print("Sorry, you lost. The corect code was", secret_code)
 
-
+#creating secret_code
 def create_code(length):
   letters_copy = letters.copy()
   code_word = ""
@@ -32,6 +32,7 @@ def create_code(length):
   code = list(code_word)
   return code
 
+#get input
 def get_code():
   guess_code = input("Guess the 4 digit code (abcd): ").upper()
   user_code = list(guess_code)
@@ -47,7 +48,7 @@ def get_code():
       break
   return guess_code
 
-
+#checking input
 def check_code(secret_code, guess):
   white_counter = 0
   red_counter = 0
