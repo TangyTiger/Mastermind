@@ -1,5 +1,5 @@
 import random
-letters = ["A", "B", "C", "D", "E", "F"]
+letters = ("A", "B", "C", "D", "E", "F")
 length = 4
 
 def main():
