@@ -1,5 +1,9 @@
-import random
-letters = ("A", "B", "C", "D", "E", "F")
+# to use on a non-color supported terminal remove colorama library and Fore.color in print statements
+
+import random 
+from colorama import Fore
+
+letters = ["A", "B", "C", "D", "E", "F"]
 length = 4
 
 def main():
@@ -62,7 +66,11 @@ def check_code(secret_code, guess):
       continue
     else:
       continue
-  print("R"*red_counter, "W"*white_counter)
+  print(Fore.RED + "R"*red_counter, end = " ")
+  print(Fore.WHITE + "W"*white_counter, end=" ")
+  print(Fore.WHITE + "")
+
+  
   return white_counter, red_counter
 
 
